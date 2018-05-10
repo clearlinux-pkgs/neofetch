@@ -4,7 +4,7 @@
 #
 Name     : neofetch
 Version  : 3.4.0
-Release  : 2
+Release  : 3
 URL      : https://github.com/dylanaraps/neofetch/archive/3.4.0.tar.gz
 Source0  : https://github.com/dylanaraps/neofetch/archive/3.4.0.tar.gz
 Summary  : No detailed summary available

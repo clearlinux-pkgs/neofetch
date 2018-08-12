@@ -4,7 +4,7 @@
 #
 Name     : neofetch
 Version  : 5.0.0
-Release  : 4
+Release  : 5
 URL      : https://github.com/dylanaraps/neofetch/archive/5.0.0.tar.gz
 Source0  : https://github.com/dylanaraps/neofetch/archive/5.0.0.tar.gz
 Summary  : No detailed summary available
@@ -13,6 +13,7 @@ License  : MIT
 Requires: neofetch-bin
 Requires: neofetch-license
 Requires: neofetch-man
+Patch1: clearlinux.patch
 
 %description
 <h3 align="center"><img src="https://i.imgur.com/ZQI2EYz.png" alt="logo" height="100px"></h3>
@@ -46,17 +47,18 @@ man components for the neofetch package.
 
 %prep
 %setup -q -n neofetch-5.0.0
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532317455
+export SOURCE_DATE_EPOCH=1534053058
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1532317455
+export SOURCE_DATE_EPOCH=1534053058
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/neofetch
 cp LICENSE.md %{buildroot}/usr/share/doc/neofetch/LICENSE.md

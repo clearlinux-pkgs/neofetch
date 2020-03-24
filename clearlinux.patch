@@ -1,9 +1,9 @@
---- a/neofetch	2018-07-23 03:44:15.000000000 +0000
-+++ b/neofetch	2018-08-12 05:45:52.209860068 +0000
-@@ -8277,6 +8277,42 @@
+--- a/neofetch
++++ b/neofetch
+@@ -9866,6 +9866,42 @@ oMMMMmMMMMNds:.+MMMmmMMN/.-odNMMMMmMMMM+
+              .odNm+  /dNms.
  EOF
-         ;;
- 
+                 ;;
 +        "Clear"*)
 +            set_colors  7 6 4 3 14
 +            read -rd '' ascii_data <<'EOF'
